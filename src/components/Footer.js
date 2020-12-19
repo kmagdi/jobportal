@@ -1,28 +1,35 @@
+import { useFetch } from './useFetch';
+import csvToJSON from "./csvToJson"
+
 export const Footer=()=>{
+  const url="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/elerhetosegek.csv"    
+  const {data,loading}=useFetch(url)
+  const contactJSON=csvToJSON(String(data), ';')
+  const contactData=contactJSON[0]
     return(
         <div className="card-group ">
-              <div className="card ">
-                  <div  className="card-footer text-muted"><small className="text-muted"><b>Székhely:</b>{this.props.contactData.location}</small>
+              <div className="card " style={{ backgroundColor:'#333D79FF',color:'#FAEBEFFF'}}>
+                  <div  className="card-footer  foot"><small ><b>Székhely:</b>{contactData.location}</small>
                   </div>
               </div>
-              <div className="card">
-                  <div className="card-footer text-muted lpc">
-                      <small className="text-muted"><b>Levelezési cím:</b>{this.props.contactData.adress}</small>
+              <div className="card" style={{ backgroundColor:'#333D79FF'}}>
+                  <div className="card-footer  lpc">
+                      <small ><b>Levelezési cím:</b>{contactData.adress}</small>
                   </div>
               </div>
-              <div className="card">
-                  <div className="card-footer text-muted lpc">
-                      <small className="text-muted"><b>Telefon:</b>{this.props.contactData.tel}</small>
+              <div className="card" style={{ backgroundColor:'#333D79FF'}}>
+                  <div className="card-footer  lpc">
+                      <small ><b>Telefon:</b>{contactData.tel}</small>
                   </div>
               </div>
-              <div className="card">
-                  <div className="card-footer text-muted lpc">
-                      <small className="text-muted"><b>E-mail:</b>{this.props.contactData.email}</small>
+              <div className="card" style={{ backgroundColor:'#333D79FF'}}>
+                  <div className="card-footer  lpc">
+                      <small ><b>E-mail:</b>{contactData.email}</small>
                   </div>
               </div>
-              <div className="card">
-                  <div className="card-footer text-muted lpc">
-                      <small className="text-muted"><b>OM azonosító:</b>{this.props.contactData.omid}</small>
+              <div className="card" style={{ backgroundColor:'#333D79FF'}}>
+                  <div className="card-footer  lpc">
+                      <small ><b>OM azonosító:</b>{contactData.omid}</small>
                   </div>
               </div>             
           </div>

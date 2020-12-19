@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar } from './components/Navbar'
+import {Footer} from './components/Footer'
 import { FilterBar } from './components/FilterBar'
 import {BrowserRouter,Route,Switch} from "react-router-dom"
 
@@ -14,6 +15,7 @@ export const App = () => {
             <FilterBar />
          </div>
         </div>
+        <Footer/>
     </BrowserRouter>
    )  
 }
