@@ -3,18 +3,20 @@ import { Navbar } from './components/Navbar'
 import {Footer} from './components/Footer'
 import { FilterBar } from './components/FilterBar'
 import {BrowserRouter,Route,Switch} from "react-router-dom"
+import { Detail} from './components/Detail';
+import "./App.css"
 
 
 export const App = () => {
   return (
     <BrowserRouter>
        <Navbar />
-       
-        <div className="container-fluid p-5 " style={{ backgroundColor: '#FAEBEFFF',color: '#333D79FF' }}>
-         <div className="row p-5 border justify-content-center">
-            <FilterBar />
-         </div>
-        </div>
+      
+         <Switch>
+          
+          <Route path="/" exact component={ FilterBar}/>
+           <Route path="/detail/:id,:jobName" exact component={Detail}/>
+        </Switch>
         <Footer/>
     </BrowserRouter>
    )  

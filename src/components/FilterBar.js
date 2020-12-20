@@ -3,10 +3,10 @@ import { useFetch } from './useFetch';
 import csvToJSON from "./csvToJson"
 import {MyTable} from "./MyTable"
 
+
 export const FilterBar = () => {
   const [searchedWord,setsearchedWord]=useState('')
 
-  const urlContacts="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/elerhetosegek.csv"    
   const urlJobs="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/allasok.csv"
 
   const {data,loading}=useFetch(urlJobs)
@@ -37,10 +37,11 @@ export const FilterBar = () => {
 
   const filteredData =filtered.filter(obj => JSON.stringify(obj).toLocaleLowerCase().includes(searchedWord.toLocaleLowerCase())) 
        
- console.log("filterbar:"+Object.keys(filteredData))
+ //console.log("filterbar:"+Object.keys(filteredData))
     
     return(
-      <React.Fragment>
+      <div className="container-fluid p-5 " style={{ backgroundColor: '#FAEBEFFF',color: '#333D79FF' }}>
+        <div className="row p-5 border justify-content-center">
                   <form className="form-inline" >
                       <label >Kulcsszavas keresés:</label>
                       <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="word"
@@ -53,13 +54,11 @@ export const FilterBar = () => {
                           <option  value="1">állás típusok</option>{sortedJobType.map(obj=><option className="text-dark">{obj}</option>)}</select>     
                        <label>A meghirdetett állások száma:{filtered.length}</label>  
                   </form>
-                  
-            
-      
-              <MyTable filteredData={filteredData} />
- 
-         
-</React.Fragment>
+
+                <MyTable filteredData={filteredData} />
+     
+     </div>    
+</div>
     )
 
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'; 
+import { Link } from 'react-router-dom';
 import { debounce } from './debounce';  
 
 
@@ -31,8 +32,10 @@ export const Navbar = () => {
 
   return (
     <div style={{ ...navbarStyles, top: visible ? '0' : '-100px' }}>  
+ <Link to="/"  style={{ color: '#FAEBEFFF',textDecoration:"underline #FAEBEFFF" }}>
          <h2  >Kecskeméti Szakképzési Centrum  </h2>   
         <h4 >Állásportál <small>(gyakorlati projektfeladat)</small></h4>
+</Link>
     </div>
   );
 };
