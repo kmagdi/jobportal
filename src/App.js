@@ -10,7 +10,7 @@ import {NotFound} from './components/NotFound'
 
 export const App = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>>
+    <BrowserRouter basename="/jobportal">>
        <Navbar />
       
          <Switch>
