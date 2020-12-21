@@ -44,13 +44,10 @@ export const Detail=({match})=>{
     return(
         <div className="container-fluid p-5 " style={{ backgroundColor: '#FAEBEFFF',color: '#333D79FF' }}>
         <h3 className='m-5'>{match.params.jobName} </h3>
-      
+        <p>{msg? msg : ''}</p>
       <div className="row   justify-content-center">
-       <div className="col-sm-7 table-responsive-sm ">
-        
-       
+       <div className="col-sm-6 table-responsive-sm ">
         <Table className="table table-hover table-bordered m-5 ">
-          {{msg}?<caption>{msg}</caption> : ''}
           <Tr className="text-left">         
                   <Tr>
                     <Th >Intézmény neve</Th>
