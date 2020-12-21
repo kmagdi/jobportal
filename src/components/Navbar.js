@@ -33,8 +33,8 @@ export const Navbar = () => {
   return (
     <div style={{ ...navbarStyles, top: visible ? '0' : '-100px' }}>  
  <Link to="/"  style={{ color: '#FAEBEFFF',textDecoration:"underline #FAEBEFFF" }}>
-         <h2  >Kecskeméti Szakképzési Centrum  </h2>   
-        <h4 >Állásportál <small>(gyakorlati projektfeladat)</small></h4>
+         <h4>Kecskeméti Szakképzési Centrum  </h4>   
+        <h6 >Állásportál <small>(gyakorlati projektfeladat)</small></h6>
 </Link>
     </div>
   );
