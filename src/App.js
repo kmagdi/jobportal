@@ -18,6 +18,7 @@ export const App = () => {
           <Route path="/" exact component={ FilterBar}/>
           <Route path="/jobportal"  component={ FilterBar}/>
            <Route path="/detail/:id,:jobName" exact component={Detail}/>
+           <Route path="/jobportal/detail/:id,:jobName" exact component={Detail}/>
            <Route component={NotFound} />
         </Switch>
         <Footer/>
