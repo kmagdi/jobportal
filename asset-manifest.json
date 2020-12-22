@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/jobportal/static/css/main.3ded128a.chunk.css",
-    "main.js": "/jobportal/static/js/main.aa62cab9.chunk.js",
-    "main.js.map": "/jobportal/static/js/main.aa62cab9.chunk.js.map",
+    "main.js": "/jobportal/static/js/main.c50c5b37.chunk.js",
+    "main.js.map": "/jobportal/static/js/main.c50c5b37.chunk.js.map",
     "runtime-main.js": "/jobportal/static/js/runtime-main.de97caa9.js",
     "runtime-main.js.map": "/jobportal/static/js/runtime-main.de97caa9.js.map",
     "static/css/2.043b4d7f.chunk.css": "/jobportal/static/css/2.043b4d7f.chunk.css",
-    "static/js/2.23ab846d.chunk.js": "/jobportal/static/js/2.23ab846d.chunk.js",
-    "static/js/2.23ab846d.chunk.js.map": "/jobportal/static/js/2.23ab846d.chunk.js.map",
+    "static/js/2.b1d32297.chunk.js": "/jobportal/static/js/2.b1d32297.chunk.js",
+    "static/js/2.b1d32297.chunk.js.map": "/jobportal/static/js/2.b1d32297.chunk.js.map",
     "index.html": "/jobportal/index.html",
     "static/css/2.043b4d7f.chunk.css.map": "/jobportal/static/css/2.043b4d7f.chunk.css.map",
     "static/css/main.3ded128a.chunk.css.map": "/jobportal/static/css/main.3ded128a.chunk.css.map",
-    "static/js/2.23ab846d.chunk.js.LICENSE.txt": "/jobportal/static/js/2.23ab846d.chunk.js.LICENSE.txt"
+    "static/js/2.b1d32297.chunk.js.LICENSE.txt": "/jobportal/static/js/2.b1d32297.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.de97caa9.js",
     "static/css/2.043b4d7f.chunk.css",
-    "static/js/2.23ab846d.chunk.js",
+    "static/js/2.b1d32297.chunk.js",
     "static/css/main.3ded128a.chunk.css",
-    "static/js/main.aa62cab9.chunk.js"
+    "static/js/main.c50c5b37.chunk.js"
   ]
 }
