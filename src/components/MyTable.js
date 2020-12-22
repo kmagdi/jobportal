@@ -8,7 +8,7 @@ export const MyTable=({filteredData})=>{
    return(
        <div>
           
-            <Table className="table table-hover  ">
+            <Table className="table table-hover table-striped ">
                 <Thead  style={{ backgroundColor: '#333D79FF',color:'#FAEBEFFF'}}>
                     <Tr className="text-center">
                         <Th className="text-left" >Állás megnevezése</Th>
