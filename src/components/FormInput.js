@@ -12,7 +12,7 @@ export const FormInput=()=>{
   const handleSubmit = (evt) => {
     setFormSubmit(true)
     evt.preventDefault();
-    if(tel==111){
+    if(tel==process.env.REACT_APP_EMAILJS_TEL){
         const templateId=process.env.REACT_APP_EMAILJS_TEMPLATEID
         const userId=process.env.REACT_APP_EMAILJS_USERID
         const serviceId=process.env.REACT_APP_EMAILJS_USERID
