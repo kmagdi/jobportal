@@ -37,7 +37,7 @@ export const Navbar = ({showLink}) => {
     <div style={{ ...navbarStyles, top: visible ? '0' : '-100px' }}>  
       <div className="row">
           <div className="col-2 text-left pl-5 pt-2"><img src={logo} alt='logo' width={'50px'}/></div>
-          <div className="col-8 text-center"><h4>  Kecskeméti Szakképzési Centrum  </h4> </div>
+          <div className="col-8 text-center pt-2"><h4>  Kecskeméti Szakképzési Centrum  </h4> </div>
            <div className="col-2">
               <Link to="/"  style={{ color: '#FAEBEFFF',textDecoration:"underline #FAEBEFFF" }}>     
                   <small className={showLink ? '': 'hidden'} >vissza a főoldalra...</small>
@@ -45,7 +45,7 @@ export const Navbar = ({showLink}) => {
             </div>
       </div>
       <div className="row">
-        <div className="col-12 text-center"><h6 >Állásportál (gyakorlati projektfeladat)</h6></div> 
+        <div className="col-12 text-center">Állásportál (gyakorlati projektfeladat)</div> 
    </div>
        
     </div>
