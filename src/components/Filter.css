@@ -1,0 +1,17 @@
+
+h4,h6{
+font-family: 'Crimson Pro', serif;
+font-size: 30px;
+}
+p,div{
+font-family: 'Crimson Pro', serif;
+}
+option,select,label,td{
+font-family: 'Crimson Pro', serif;
+font-size: 18px;
+color: #333D79FF
+}
+table,tr,td{
+border: solid 1px white;
+
+}

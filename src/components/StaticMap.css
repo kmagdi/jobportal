@@ -1,0 +1,17 @@
+.mapContainer{
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+  
+   
+    
+}
+.map{
+    flex-grow: 1;
+    
+}
+iframe{
+   border: none;
+   
+   
+}

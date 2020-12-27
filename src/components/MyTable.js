@@ -1,10 +1,13 @@
+import {React,useState} from 'react'
 import {Row} from "./Row"
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
+import { Table, Thead, Tbody, Tr, Th } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 
 
 
-export const MyTable=({filteredData})=>{
+export const MyTable=(props)=>{
+   console.log('props mytable:'+props.onClickLink)
+   props.onClickLink(false)
    return(
        <div>
           
@@ -18,7 +21,7 @@ export const MyTable=({filteredData})=>{
                     </Tr>
                 </Thead>
                 <Tbody>
-                    {filteredData.map((obj)=><Row key={obj.id} job={obj}/>)  }       
+                    {props.filteredData.map((obj)=><Row key={obj.id} job={obj} onClickLink={props.onClickLink} />)  }       
                 </Tbody>
             </Table>
     
