@@ -19,7 +19,7 @@ theme = responsiveFontSizes(theme);*/
 export const Navbar = ({showLink}) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0); 
   const [visible, setVisible] = useState(true);  
-  const [x,setX]=useState(900)   
+  const [x,setX]=useState(document.documentElement.clientWidth)   
   
   useEffect(()=>{
     const resizeListener=window.addEventListener('resize',resizeFonts)
@@ -59,7 +59,7 @@ const respFontSize=x>700? '25px':(x>500?'20px':'16px')
             <div className="col-10 text-center">
                   Kecskeméti Szakképzési Centrum
                  <div>
-                   Állásportál (gyakorlati projektfeladat)
+                   Állásportál <span className="back"> (gyakorlati projektfeladat)</span> 
                    <div className='back'>
                       <Link to="/"  style={{ color: '#FAEBEFFF',textDecoration:"underline #FAEBEFFF" }}>     
                           <small className={showLink ? '': 'hidden'} >vissza a főoldalra...</small>
