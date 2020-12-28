@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { debounce } from './debounce';  
 import "./Navbar.css"
 import logo from "../ikon.ico"
-import {
+/*import {
   createMuiTheme,
   responsiveFontSizes,
   MuiThemeProvider,
@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 
 let theme = createMuiTheme();
-theme = responsiveFontSizes(theme);
+theme = responsiveFontSizes(theme);*/
 
 
 
@@ -19,6 +19,15 @@ theme = responsiveFontSizes(theme);
 export const Navbar = ({showLink}) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0); 
   const [visible, setVisible] = useState(true);  
+  const [x,setX]=useState(900)   
+  
+  useEffect(()=>{
+    const resizeListener=window.addEventListener('resize',resizeFonts)
+    return ()=>window.removeEventListener('resize',resizeListener)
+})
+
+const resizeFonts=()=>{setX(document.documentElement.clientWidth)} 
+console.log("x="+x)                   
   
   const handleScroll = debounce(() => {
     const currentScrollPos = window.pageYOffset;
@@ -30,47 +39,36 @@ export const Navbar = ({showLink}) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos, visible, handleScroll]);
-
+const respFontSize=x>700? '25px':(x>500?'20px':'16px')
   const navbarStyles = {
     position: 'fixed',
-    height: '110px',
+    height: '100px',
     width: '100%',
     backgroundColor: '#333D79FF',
     color:'#FAEBEFFF',
     textAlign: 'center',
     transition: 'top 0.6s',
+    fontSize: respFontSize
    
   }
 
   return (
     <div style={{ ...navbarStyles, top: visible ? '0' : '-100px' }}>  
       <div className="row">
-          <div className="col-2 text-left pl-5 pt-2"><img src={logo} alt='logo' width={'50px'}/></div>
-          <div className="col-8 text-center pt-2 myNav">
-          <MuiThemeProvider theme={theme}>
-            <Typography variant="subtitle" gutterBottom>
-              Kecskeméti Szakképzési Centrum  
-            </Typography>
-          </MuiThemeProvider>
-          </div>
-           <div className="col-2">
-              <Link to="/"  style={{ color: '#FAEBEFFF',textDecoration:"underline #FAEBEFFF" }}>     
-                  <small className={showLink ? '': 'hidden'} >vissza a főoldalra...</small>
-              </Link>
-            </div>
-      </div>
-      <div className="row">
-        <div className="col-12 text-center">
-          <MuiThemeProvider>
-            <Typography variant="subtitle" gutterBottom>
-              Állásportál (gyakorlati projektfeladat)
-            </Typography>
-          </MuiThemeProvider>
-          
-
-        </div> 
-   </div>
-       
+          <div className="col-1 text-center" ><img className='p-2' src={logo} width={'60px'}/></div>
+            <div className="col-10 text-center">
+                  Kecskeméti Szakképzési Centrum
+                 <div>
+                   Állásportál (gyakorlati projektfeladat)
+                   <div className='back'>
+                      <Link to="/"  style={{ color: '#FAEBEFFF',textDecoration:"underline #FAEBEFFF" }}>     
+                          <small className={showLink ? '': 'hidden'} >vissza a főoldalra...</small>
+                      </Link>
+                   </div>
+                </div>
+               
+        </div>
+       </div>
     </div>
   );
 };
