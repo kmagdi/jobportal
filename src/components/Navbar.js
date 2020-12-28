@@ -33,7 +33,7 @@ export const Navbar = ({showLink}) => {
 
   const navbarStyles = {
     position: 'fixed',
-    height: '100px',
+    height: '110px',
     width: '100%',
     backgroundColor: '#333D79FF',
     color:'#FAEBEFFF',

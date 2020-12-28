@@ -51,7 +51,7 @@ const handleEnter=(e)=>{
     return(
       <div className="container-fluid p-5 " style={{ backgroundColor: '#FAEBEFFF',color: '#333D79FF' }}>
         <div className="row p-5 border justify-content-center">
-                  <form className="form-inline" >
+                  <form className="form-inline pt-5" >
                       <label >Kulcsszavas keresés:</label>
                       <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="word"
                               value={searchedWord} onChange={handleSearch} onKeyDown={handleEnter}/>
